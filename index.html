@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converter</title>
+    <link rel="icon" href="logo.png" type="image/x-icon">
+    
+    <script src="index.js"></script>
+
+    <style>
+        body {
+            text-align: center;
+        }
+        input, button {
+            padding: 2px;
+            
+        }
+        input {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <h1>Number Converter</h1>
+    
+    <p>
+        Convert numbers to different forms of number representation. <br>
+        Made by Mel Wang.
+    </p>
+    <br>
+    <img src="glob.PNG", alt="Front image" width="150">
+    <p style="font-size: xx-small;">"Cool website" - Glob</p>
+    <h3>How it works</h3>
+    <p style="font-size: small;">
+        Type a number into one of the three text boxes below (with corresponding format)
+        , the program will <br>
+        automatically fill in the other two boxes with their converted values.
+    </p>
+
+    <img src="warning.png" 
+        for="dec"
+        id="dec_warn" 
+        width="20"
+        alt="Error"
+        style="display: none"
+        title="Format Error: Ensure your input is only numbers 0-9 and no Letters"
+    >
+
+    <label for="dec">Decimal:</label>
+    <input type="text" id="dec" oninput="convert_num(0)">
+
+    <button id="dec_cpy" onclick="copy_text(0)">
+        <img src="copy_paste.png" alt="Copy and Paste" width = 15>
+    </button>
+    
+    <br>
+
+    <label for="hex">Hexadecimal:</label>
+    <input type="text" id="hex" oninput="convert_num(1)">
+    <button id="dec_cpy" onclick="copy_text(1)">
+        <img src="copy_paste.png" alt="Copy and Paste" width = 15>
+    </button>
+
+    <br>
+
+    <label for="bin">Binary:</label>
+    <input type="text" id="bin" oninput="convert_num(2)">
+    <button id="dec_cpy" onclick="copy_text(2)">
+        <img src="copy_paste.png" alt="Copy and Paste" width = 15>
+    </button>
+
+    <br>
+    <button onclick="clear_text()">Reset</button>
+
+    <h3>Credits</h3>
+    <a href = "https://www.flaticon.com/authors/good-ware">Warning symbol</a>
+</body>
+</html>
